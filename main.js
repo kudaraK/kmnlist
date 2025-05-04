@@ -189,3 +189,25 @@ window.addEventListener('focus', () => {
 window.onload = function() {
   document.getElementById('item-input').focus();
 };
+
+const micBtn = document.getElementById('mic-btn');
+const input = document.getElementById('item-input');
+
+if ('webkitSpeechRecognition' in window) {
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'ja-JP';
+  recognition.continuous = false;
+  recognition.interimResults = false;
+
+  micBtn.onclick = () => {
+    recognition.start();
+  };
+
+  recognition.onresult = function(event) {
+    input.value = event.results[0][0].transcript;
+    input.focus();
+  };
+} else {
+  micBtn.style.display = 'none'; // 未対応ブラウザでは非表示
+}
+
