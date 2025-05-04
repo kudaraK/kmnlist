@@ -15,6 +15,24 @@ body {
   color: var(--color-black);
 }
 
+h1, h2, h3 {
+  font-family: var(--font-family);
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  color: var(--color-black);
+}
+h1 {
+  font-size: 1.5rem; /* 24px */
+}
+h2 {
+  font-size: 1.25rem; /* 20px */
+}
+h3 {
+  font-size: 1.125rem; /* 18px */
+}
+
 ul {
   padding-left: 1em;
 }
