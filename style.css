@@ -1,8 +1,26 @@
-body { font-family: sans-serif; max-width: 400px; margin: 2em auto; }
-ul { padding-left: 1em; }
-li { margin-bottom: 0.5em; display: flex; align-items: center; }
-.delete-btn { margin-left: 1em; color: red; cursor: pointer; }
-#last-updated { font-size: 0.9em; color: #555; margin-top: 1em; }
+body {
+  font-family: sans-serif;
+  max-width: 400px;
+  margin: 2em auto;
+}
+ul {
+  padding-left: 1em;
+}
+li {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+.delete-btn {
+  margin-left: 1em;
+  color: red;
+  cursor: pointer;
+}
+#last-updated {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 1em;
+}
 .checked-text {
   color: #aaa;
   text-decoration: line-through;
@@ -40,7 +58,7 @@ li { margin-bottom: 0.5em; display: flex; align-items: center; }
   border: none;
   padding: 0;
 }
-.drag-handle {
+.drag-handle, .quick-handle {
   cursor: grab;
   margin-right: 0.5em;
   font-size: 1.2em;
