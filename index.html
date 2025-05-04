@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>買い物メモ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>買い物メモ</h1>
+  <input id="item-input" type="text" placeholder="買うものを入力" autofocus>
+  <button onclick="addItem()">追加</button>
+
+  <div style="margin-bottom:0.5em;">
+    <span>よく使う項目</span>
+    <button class="edit-link" onclick="location.href='edit-quick.html'">編集</button>
+  </div>
+  <div class="quick-btns" id="quick-btns"></div>
+
+  <ul id="item-list"></ul>
+  <div id="last-updated"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
