@@ -102,3 +102,32 @@ li {
 .drag-over {
   background: #e3f2fd;
 }
+label {
+  display: block;
+  font-family: var(--font-family);
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  color: var(--color-black);
+}
+input[type="text"], input[type="email"], input[type="number"], textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1.5px solid #bbb;
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: 1em;
+  background: #fff;
+  color: var(--color-black);
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-blue-500);
+  box-shadow: 0 0 0 2px #e3f0fc;
+}
