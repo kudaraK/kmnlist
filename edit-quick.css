@@ -1,6 +1,12 @@
-body { font-family: sans-serif; max-width: 400px; margin: 2em auto; }
-h1 { font-size: 1.2em; margin-bottom: 1em; }
-.quick-list { list-style: none; padding: 0; margin: 0 0 1em 0; }
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.quick-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
 .quick-item {
   display: flex;
   align-items: center;
@@ -11,10 +17,7 @@ h1 { font-size: 1.2em; margin-bottom: 1em; }
   background: #fafafa;
 }
 .quick-handle {
-  cursor: grab;
-  margin-right: 0.7em;
-  color: #888;
-  font-size: 1.2em;
+  margin-right: 0.7em; /* edit-quickページのみ右余白を広めに */
 }
 .quick-delete {
   color: #c33;
