@@ -48,13 +48,20 @@ function handleDrop(e, idx) {
   e.preventDefault();
   e.currentTarget.classList.remove('drag-over');
   if (dragSrcIdx === null || dragSrcIdx === idx) return;
-  const uncheckedItems = items.map((item, i) => ({...item, origIdx: i})).filter(item => !item.checked);
-  const checkedItems = items.map((item, i) => ({...item, origIdx: i})).filter(item => item.checked);
 
+  // 未チェック項目だけのリストを作成
+  const uncheckedItems = items
+    .map((item, i) => ({ ...item, origIdx: i }))
+    .filter(item => !item.checked);
+  const checkedItems = items
+    .map((item, i) => ({ ...item, origIdx: i }))
+    .filter(item => item.checked);
+
+  // 並び替え（ドラッグ元→ドラッグ先）
   const movedItem = uncheckedItems.splice(dragSrcIdx, 1)[0];
   uncheckedItems.splice(idx, 0, movedItem);
 
-  // itemsを再構成
+  // itemsを再構成（未チェック→チェック済みの順）
   const newItems = [];
   uncheckedItems.forEach(item => newItems.push(items[item.origIdx]));
   checkedItems.forEach(item => newItems.push(items[item.origIdx]));
@@ -97,6 +104,7 @@ function renderList() {
   const uncheckedItems = items.map((item, idx) => ({ ...item, idx })).filter(item => !item.checked);
   const checkedItems = items.map((item, idx) => ({ ...item, idx })).filter(item => item.checked);
 
+  // 未チェック項目はドラッグ可能
   uncheckedItems.forEach((item, i) => {
     const li = document.createElement('li');
     li.draggable = true;
@@ -131,6 +139,7 @@ function renderList() {
     ul.appendChild(li);
   });
 
+  // チェック済み項目はドラッグ不可
   checkedItems.forEach((item) => {
     const li = document.createElement('li');
     const handle = document.createElement('span');
