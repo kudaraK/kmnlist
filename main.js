@@ -185,3 +185,7 @@ window.addEventListener('focus', () => {
   quickItems = JSON.parse(localStorage.getItem('shopping-quick-items') || '["牛乳","パン","フルグラ"]');
   renderQuickBtns();
 });
+
+window.onload = function() {
+  document.getElementById('item-input').focus();
+};
