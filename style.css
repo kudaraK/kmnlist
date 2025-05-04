@@ -84,6 +84,27 @@ button:hover, .quick-btn:hover {
   background: var(--color-blue-700);
 }
 
+/* 追加ボタン（プライマリー・大きめ） */
+form button[type="submit"] {
+  background: var(--color-blue-500);
+  color: #fff;
+  border-radius: var(--radius);
+  border: none;
+  padding: 1em 0;
+  font-size: 1.2em;
+  width: 100%;
+  min-height: 56px;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,86,179,0.06);
+  transition: background 0.2s;
+}
+form button[type="submit"]:hover {
+  background: var(--color-blue-700);
+}
+
+
 /* その他共通 */
 ul {
   padding-left: 1em;
